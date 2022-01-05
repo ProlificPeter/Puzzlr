@@ -20,7 +20,7 @@
 		F5AE0F532785098F00D83EA7 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		F5AE0F552785099000D83EA7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F5AE0F582785099000D83EA7 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		F5AE0F6327851D3300D83EA7 /* Translator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Translator.swift; sourceTree = "<group>"; };
+		F5AE0F6327851D3300D83EA7 /* Translator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Translator.swift; sourceTree = "<group>"; usesTabs = 1; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,8 +53,8 @@
 		F5AE0F502785098F00D83EA7 /* Puzzlr */ = {
 			isa = PBXGroup;
 			children = (
-				F5AE0F6027851AC700D83EA7 /* Models */,
 				F5AE0F6227851C8400D83EA7 /* App */,
+				F5AE0F6027851AC700D83EA7 /* Models */,
 				F5AE0F6127851C6600D83EA7 /* Views */,
 				F5AE0F552785099000D83EA7 /* Assets.xcassets */,
 				F5AE0F572785099000D83EA7 /* Preview Content */,
