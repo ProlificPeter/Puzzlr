@@ -1,8 +1,3 @@
-[
-  "01":"Hello, World!"
-]
-
-
 {"message":[    
     {"id":0, "message": "Hello, 1!},    
     {"id":1, "message": "Hello, 2!}
