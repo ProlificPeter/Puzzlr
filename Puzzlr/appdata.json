@@ -1,4 +1,5 @@
 {
+    "messages":
     [    
         {"message": "Hello, 1!", "isAvailable" : true},    
         {"message": "Hello, 2!", "isAvailable" : false}
