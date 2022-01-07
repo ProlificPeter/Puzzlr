@@ -1,4 +1,6 @@
-[    
-    {"message": "Hello, 1!"},    
-    {"message": "Hello, 2!"}
-]
+{
+    [    
+        {"message": "Hello, 1!", "isAvailable" : True},    
+        {"message": "Hello, 2!", "isAvailable" : False}
+    ]
+}
