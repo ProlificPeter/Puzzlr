@@ -13,9 +13,51 @@ struct ContentView: View {
     @State private var translator: Translator = Translator()
     @State private var foundCode: String = ""
     @State private var rewardResponseIsVisible: Bool = false
+	@State private var messages = [Message]()
+	@State private var callIsSuccessful: Bool = false
+	
+	func loadData() async {
+		let configuration = URLSessionConfiguration.ephemeral
+		guard let url = URL(string: "https://raw.githubusercontent.com/ProlificPeter/Puzzlr/main/Puzzlr/appdata.json") else {
+			print("Invalid URL")
+			return
+		}
+		
+		do {
+			let (data, _) = try await URLSession.shared.data(from: url)
+			
+					
+			let decodedResponse = try JSONDecoder().decode(Response.self, from: data)
+			messages = decodedResponse.messages
+			
+			print(messages[0].message)
+			callIsSuccessful = true
+			
+		} catch {
+			print(error)
+		}
+		
+		
+	}
     
     var body: some View {
         VStack {
+			VStack {
+				/*if callIsSuccessful {
+					Text(messages[0].message)
+				}*/
+				if callIsSuccessful {
+					ForEach(messages, id: \.self) { message in
+						if message.isAvailable {
+							Text(message.message)
+						}
+					}
+				}
+				
+			}
+			.task {
+				await loadData()
+			}
             VStack{
                 Text("Code Translator")
                     .padding()
@@ -58,6 +100,7 @@ struct ContentView: View {
 
             }
         }
+        
     }
 }
 
@@ -66,6 +109,6 @@ struct ContentView_Previews: PreviewProvider {
         ContentView()
             .preferredColorScheme(.dark)
     }
-    
-    
 }
+    
+
