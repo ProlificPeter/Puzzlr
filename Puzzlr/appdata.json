@@ -2,6 +2,6 @@
     "messages":
     [    
         {"message": "Welcome to the game, Jewls!", "isAvailable" : false},    
-        {"message": "The first book one reaches for on San Francisco Food Week.", "isAvailable" : true}
+        {"message": "Clue 1: The first book one reaches for on San Francisco Food Week.", "isAvailable" : true}
     ]
 }
