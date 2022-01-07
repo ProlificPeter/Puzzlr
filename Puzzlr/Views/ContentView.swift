@@ -17,7 +17,8 @@ struct ContentView: View {
 	@State private var callIsSuccessful: Bool = false
 	
 	func loadData() async {
-		let configuration = URLSessionConfiguration.ephemeral
+		//TODO: figure out URLSession Configuration
+		//let configuration = URLSessionConfiguration.ephemeral
 		guard let url = URL(string: "https://raw.githubusercontent.com/ProlificPeter/Puzzlr/main/Puzzlr/appdata.json") else {
 			print("Invalid URL")
 			return
@@ -43,13 +44,11 @@ struct ContentView: View {
     var body: some View {
         VStack {
 			VStack {
-				/*if callIsSuccessful {
-					Text(messages[0].message)
-				}*/
 				if callIsSuccessful {
 					ForEach(messages, id: \.self) { message in
 						if message.isAvailable {
 							Text(message.message)
+								.padding(.all)
 						}
 					}
 				}
