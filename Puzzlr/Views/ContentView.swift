@@ -10,23 +10,52 @@ import SwiftUI
 
 
 struct ContentView: View {
-    @State private var translator: Translator = Translator()
+    @State private var codex = Codex()
     @State private var foundCode: String = ""
     @State private var rewardResponseIsVisible: Bool = false
 	@State private var messages = [Message]()
-	@State private var callIsSuccessful: Bool = false
+	@State private var translations = [String : String]()
+	@State private var responseCallIsSuccessful: Bool = false
+	@State private var translationCallIsSuccessful: Bool = false
 	
 	func loadData() async {
-		//TODO: figure out URLSession Configuration
+		
+		Network().getResponses { result in
+			switch result {
+			case.success(let messages):
+				DispatchQueue.main.async {
+					self.messages = messages
+					responseCallIsSuccessful = true
+				}
+				
+			case.failure(let error):
+				print(error.localizedDescription)
+				responseCallIsSuccessful = false
+			}
+		}
+		
+		Network().getTranslations { result in
+			switch result {
+			case.success(let translation):
+				DispatchQueue.main.async {
+					self.translations = translation
+					translationCallIsSuccessful = true
+				}
+			case.failure(let error):
+				print(error.localizedDescription)
+				translationCallIsSuccessful = false
+			}
+		}
+		
+		/* TODO: figure out URLSession Configuration */
 		//let configuration = URLSessionConfiguration.ephemeral
-		guard let url = URL(string: "https://raw.githubusercontent.com/ProlificPeter/Puzzlr/main/Puzzlr/appdata.json") else {
+		/*guard let url = URL(string: "https://raw.githubusercontent.com/ProlificPeter/Puzzlr/main/Puzzlr/appdata.json") else {
 			print("Invalid URL")
 			return
 		}
 		
 		do {
 			let (data, _) = try await URLSession.shared.data(from: url)
-			
 					
 			let decodedResponse = try JSONDecoder().decode(Response.self, from: data)
 			messages = decodedResponse.messages
@@ -38,13 +67,13 @@ struct ContentView: View {
 			print(error)
 		}
 		
-		
+		*/
 	}
     
     var body: some View {
         VStack {
 			VStack {
-				if callIsSuccessful {
+				if responseCallIsSuccessful {
 					ForEach(messages, id: \.self) { message in
 						if message.isAvailable {
 							Text(message.message)
@@ -72,12 +101,18 @@ struct ContentView: View {
                 Button(action: {
                     self.rewardResponseIsVisible = true
                 }) {
-                    Text("Translate")
+					if translationCallIsSuccessful {
+						Text("Translate")
+					}
+					else {
+						Text("Network Response Error")
+							.disabled(true)
+					}
                 }
                 .disabled(rewardResponseIsVisible)
             }
             if rewardResponseIsVisible {
-                let result = translator.translateCode(input: foundCode.uppercased())
+                let result = codex.translateCode(input: foundCode.uppercased(), translation: translations)
                 if result.0 {
                     Text(result.1)
                         .padding(.top, 50.0)
