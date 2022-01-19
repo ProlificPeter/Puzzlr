@@ -21,8 +21,7 @@ class Network {
 				return
 			}
 			do {
-//				let messages = try JSONDecoder().decode([Message].self, from: data!)
-				let messages = try JSONDecoder().decode([Response].self, from: data!)
+				let messages = try JSONDecoder().decode([Message].self, from: data!)
 				completion(.success(messages))
 				if !messages.isEmpty {
 					print(messages[0].message)
