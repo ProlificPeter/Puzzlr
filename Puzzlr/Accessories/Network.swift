@@ -21,13 +21,15 @@ class Network {
 				return
 			}
 			do {
-				let messages = try JSONDecoder().decode([Message].self, from: data!)
+//				let messages = try JSONDecoder().decode([Message].self, from: data!)
+				let messages = try JSONDecoder().decode([Response].self, from: data!)
 				completion(.success(messages))
 				if !messages.isEmpty {
 					print(messages[0].message)
 					}
 				} catch {
 					print(error)
+					print("Failure during JSON Decoding for Message array")
 			}
 		}.resume()
 	}
@@ -52,6 +54,7 @@ class Network {
 					}
 				} catch {
 					print(error)
+					print("failure during JSON Decoding for Dictionary")
 			}
 		}.resume()
 		
