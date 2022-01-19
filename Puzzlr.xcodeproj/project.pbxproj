@@ -11,7 +11,6 @@
 		F540307627987BF5007BD928 /* Translation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F540307527987BF5007BD928 /* Translation.swift */; };
 		F540307927987C6C007BD928 /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = F540307827987C6C007BD928 /* Network.swift */; };
 		F540307B27987CD3007BD928 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F540307A27987CD3007BD928 /* Constants.swift */; };
-		F540307D2798A9B7007BD928 /* codex.json in Resources */ = {isa = PBXBuildFile; fileRef = F540307C2798A9B7007BD928 /* codex.json */; };
 		F5AE0F522785098F00D83EA7 /* PuzzlrApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5AE0F512785098F00D83EA7 /* PuzzlrApp.swift */; };
 		F5AE0F542785098F00D83EA7 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5AE0F532785098F00D83EA7 /* ContentView.swift */; };
 		F5AE0F562785099000D83EA7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F5AE0F552785099000D83EA7 /* Assets.xcassets */; };
@@ -24,7 +23,6 @@
 		F540307527987BF5007BD928 /* Translation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Translation.swift; sourceTree = "<group>"; };
 		F540307827987C6C007BD928 /* Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
 		F540307A27987CD3007BD928 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
-		F540307C2798A9B7007BD928 /* codex.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = codex.json; sourceTree = "<group>"; };
 		F5AE0F4E2785098F00D83EA7 /* Puzzlr.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Puzzlr.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F5AE0F512785098F00D83EA7 /* PuzzlrApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PuzzlrApp.swift; sourceTree = "<group>"; };
 		F5AE0F532785098F00D83EA7 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -56,7 +54,6 @@
 		F5AE0F452785098F00D83EA7 = {
 			isa = PBXGroup;
 			children = (
-				F540307C2798A9B7007BD928 /* codex.json */,
 				F5AE0F502785098F00D83EA7 /* Puzzlr */,
 				F5AE0F4F2785098F00D83EA7 /* Products */,
 			);
@@ -175,7 +172,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F540307D2798A9B7007BD928 /* codex.json in Resources */,
 				F5AE0F592785099000D83EA7 /* Preview Assets.xcassets in Resources */,
 				F5AE0F562785099000D83EA7 /* Assets.xcassets in Resources */,
 			);
