@@ -1,7 +1,10 @@
 {
-    "messages":
-    [    
-        {"message": "Welcome to the game, Jewls!", "isAvailable" : false},    
-        {"message": "Clue 1: The first book one reaches for on San Francisco Food Week.", "isAvailable" : true}
-    ]
+	"messages":
+	[
+		{"message": "Welcome to the game, Jewls!", "isAvailable" : false},
+		{"message": "Clue 1: The first book one reaches for on San Francisco Food Week.", "isAvailable" : false},
+		{"message": "Clue 2: A Perfect bookend to our cracker jack summer.", "isAvailable" : false},
+		{"message": "Clue 3: A book that always takes me There and Back Again.", "isAvailable" : false},
+		{"message": "Clue 4: Spin this collab between an ivory twinkler and a kid from Seattle.", "isAvailable" : true}
+	]
 }
