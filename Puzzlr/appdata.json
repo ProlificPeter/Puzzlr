@@ -5,6 +5,7 @@
         {"message": "Clue 1: The first book one reaches for on San Francisco Food Week.", "isAvailable" : false},
         {"message": "Clue 2: A Perfect bookend to our cracker jack summer.", "isAvailable" : false},
         {"message": "Clue 3: A book that always takes me There and Back Again.", "isAvailable" : true},
-        {"message": "Clue 4: Spin this collab between an ivory twinkler and a kid from Seattle.", "isAvailable" : true}
+        {"message": "Clue 4: Spin this collab between an ivory twinkler and a kid from Seattle.", "isAvailable" : false},
+        {"message": "Clue 5: A tome of nearly endless scribbled thoughts, sketches, and cocktail recipes, wrapped in memories and favorites.", "isAvailable" : true}
     ]
 }
