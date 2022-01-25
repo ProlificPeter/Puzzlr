@@ -7,20 +7,28 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F54030742786503C007BD928 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = F54030732786503C007BD928 /* Message.swift */; };
+		F540307627987BF5007BD928 /* Translation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F540307527987BF5007BD928 /* Translation.swift */; };
+		F540307927987C6C007BD928 /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = F540307827987C6C007BD928 /* Network.swift */; };
+		F540307B27987CD3007BD928 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F540307A27987CD3007BD928 /* Constants.swift */; };
 		F5AE0F522785098F00D83EA7 /* PuzzlrApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5AE0F512785098F00D83EA7 /* PuzzlrApp.swift */; };
 		F5AE0F542785098F00D83EA7 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5AE0F532785098F00D83EA7 /* ContentView.swift */; };
 		F5AE0F562785099000D83EA7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F5AE0F552785099000D83EA7 /* Assets.xcassets */; };
 		F5AE0F592785099000D83EA7 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F5AE0F582785099000D83EA7 /* Preview Assets.xcassets */; };
-		F5AE0F6427851D3300D83EA7 /* Translator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5AE0F6327851D3300D83EA7 /* Translator.swift */; };
+		F5AE0F6427851D3300D83EA7 /* Codex.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5AE0F6327851D3300D83EA7 /* Codex.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		F54030732786503C007BD928 /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
+		F540307527987BF5007BD928 /* Translation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Translation.swift; sourceTree = "<group>"; };
+		F540307827987C6C007BD928 /* Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
+		F540307A27987CD3007BD928 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		F5AE0F4E2785098F00D83EA7 /* Puzzlr.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Puzzlr.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F5AE0F512785098F00D83EA7 /* PuzzlrApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PuzzlrApp.swift; sourceTree = "<group>"; };
 		F5AE0F532785098F00D83EA7 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		F5AE0F552785099000D83EA7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F5AE0F582785099000D83EA7 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		F5AE0F6327851D3300D83EA7 /* Translator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Translator.swift; sourceTree = "<group>"; usesTabs = 1; };
+		F5AE0F6327851D3300D83EA7 /* Codex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Codex.swift; sourceTree = "<group>"; usesTabs = 1; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -34,6 +42,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F540307727987C51007BD928 /* Accessories */ = {
+			isa = PBXGroup;
+			children = (
+				F540307827987C6C007BD928 /* Network.swift */,
+				F540307A27987CD3007BD928 /* Constants.swift */,
+			);
+			path = Accessories;
+			sourceTree = "<group>";
+		};
 		F5AE0F452785098F00D83EA7 = {
 			isa = PBXGroup;
 			children = (
@@ -53,6 +70,7 @@
 		F5AE0F502785098F00D83EA7 /* Puzzlr */ = {
 			isa = PBXGroup;
 			children = (
+				F540307727987C51007BD928 /* Accessories */,
 				F5AE0F6227851C8400D83EA7 /* App */,
 				F5AE0F6027851AC700D83EA7 /* Models */,
 				F5AE0F6127851C6600D83EA7 /* Views */,
@@ -73,7 +91,9 @@
 		F5AE0F6027851AC700D83EA7 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				F5AE0F6327851D3300D83EA7 /* Translator.swift */,
+				F5AE0F6327851D3300D83EA7 /* Codex.swift */,
+				F54030732786503C007BD928 /* Message.swift */,
+				F540307527987BF5007BD928 /* Translation.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -164,9 +184,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F5AE0F6427851D3300D83EA7 /* Translator.swift in Sources */,
+				F5AE0F6427851D3300D83EA7 /* Codex.swift in Sources */,
+				F54030742786503C007BD928 /* Message.swift in Sources */,
 				F5AE0F542785098F00D83EA7 /* ContentView.swift in Sources */,
+				F540307927987C6C007BD928 /* Network.swift in Sources */,
+				F540307B27987CD3007BD928 /* Constants.swift in Sources */,
 				F5AE0F522785098F00D83EA7 /* PuzzlrApp.swift in Sources */,
+				F540307627987BF5007BD928 /* Translation.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
