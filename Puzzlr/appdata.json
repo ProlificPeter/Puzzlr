@@ -4,5 +4,6 @@
 	{"message": "Clue 2: A Perfect bookend to our cracker jack summer.", "isAvailable" : false},
 	{"message": "Clue 3: A book that always takes me There and Back Again.", "isAvailable" : false},
 	{"message": "Clue 4: Spin this collab between an ivory twinkler and a kid from Seattle.", "isAvailable" : false},
-	{"message": "Clue 5: A tome of nearly endless scribbled thoughts, sketches, and drink recipes all wrapped in memories and favorites.", "isAvailable" : true}
+	{"message": "Clue 5: A tome of nearly endless scribbled thoughts, sketches, and drink recipes all wrapped in memories and favorites.", "isAvailable" : false},
+	{"message": "Clue 6: Saltwater Hubris", "isAvailable" : true}
 ]
