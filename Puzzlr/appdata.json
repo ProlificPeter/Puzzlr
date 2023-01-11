@@ -7,6 +7,6 @@
 	{"message": "Clue 5: A tome of nearly endless scribbled thoughts, sketches, and drink recipes all wrapped in memories and favorites.", "isAvailable" : false},
 	{"message": "Clue 6: Saltwater Hubris", "isAvailable" : false},
 	{"message": "Clue 7: You might find this book in either the History or the Science section of the library, though it's been a source of inspiration for Science Fiction.", "isAvailable" : false},
-	{"message": "Clue 8: Death Becomes Narrator in this mid-aughts Novel.", "isAvailable" : true},
-	{"message": "Clue 9: <TBD>", "isAvailable" : false}
+	{"message": "Clue 8: Death Becomes Narrator in this mid-aughts Novel.", "isAvailable" : false},
+	{"message": "Clue 9: Fittingly, this 'last' clue starts out on a familiar path but truthfully (and thankfully) goes in a different direction", "isAvailable" : true}
 ]
